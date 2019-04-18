@@ -24,6 +24,6 @@ const photos = require("./photos.js");
 app.use("/api/photos", photos.routes);
 
 const photo = require("./photos.js");
-app.use("/api/photo", photo.routes);
+app.use("/api/photos", photo.routes);
 
 app.listen(3001, () => console.log('Server listening on port 3001!'));

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <div class="pure-menu">
-    <span class="pure-menu-heading">Photo Bomb</span>
+    <span class="pure-menu-heading">Quality Wallpapers for Nerds!</span>
     <ul class="pure-menu-list">
       <li class="pure-menu-item">
         <router-link to="/" class="pure-menu-link">Home</router-link>
@@ -23,10 +23,11 @@
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  font-size: 18px;
+  color: black;
+  font-size: 24px;
   display: flex;
   min-height: 100%;
+  background-color: grey;
 }
 
 .pure-menu {
@@ -41,7 +42,7 @@
   color: #fff;
   font-size: 1.2em;
   padding: 20px 20px;
-  background-color: #F2385A;
+  background-color: #429bf4;
   margin-bottom: 10px;
 }
 
@@ -52,12 +53,12 @@
 }
 
 .pure-menu-link:hover {
-  background: #333;
+  background: #429bf4;
 }
 
 .pure-menu-link.router-link-exact-active {
   background: #fff;
-  color: #F2385A;
+  color: #429bf4;
 }
 
 .content {
@@ -81,7 +82,7 @@ body {
 }
 
 .error {
-  color: #F2385A;
+  color: ##429bf4;
 }
 
 .pure-button-primary {

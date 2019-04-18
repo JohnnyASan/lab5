@@ -1,10 +1,9 @@
 <template>
-<div>
-    <router-link :to="{ name: 'photo', params: { id: photo._id }}"><img :src="photo.path" /></router-link>
+<div v-if="photo">
   <img :src="photo.path" />
   <p class="photoTitle">{{photo.title}}</p>
   <p class="photoDate">
-<span v-if="photo.user.name">{{photo.user.name}}, </span>
+<span v-if="photo.user && photo.user.name">{{photo.user.name}}, </span>
 {{formatDate(photo.created)}}
 </p>
   <p>{{photo.description}}</p>
@@ -19,9 +18,12 @@ export default {
   computed: {
     photo()
     {
-      return this.$store.state.photo;
-      //getting info from store.js
+      return this.$store.state.photo;//getting info from store.js
     }
+  },
+  async created() {
+    await this.$store.dispatch("getUser");
+    await this.$store.dispatch("getMyPhoto", this.$route.params.id);
   },
   methods: {
     formatDate(date) {

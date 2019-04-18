@@ -84,9 +84,11 @@ router.get("/all", async (req, res) => {
 });
 
 //create function to get photo i want
-router.get("/photo", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-    let photo = await Photo.find().sort({
+    let photo = await Photo.findOne({
+      photo: req.params.id
+    }).sort({
       created: -1
     }).populate('user');
     return res.send(photo);

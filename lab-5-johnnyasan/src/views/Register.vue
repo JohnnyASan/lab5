@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h1>Register for an account</h1>
+  <h1>Register for an account now and share your favorite wallpapers with those who may struggle to express themselves. Maybe you'll find some wallpapers you love too!</h1>
   <form @submit.prevent="register" class="pure-form pure-form-aligned">
     <fieldset>
       <p class="pure-form-message-inline">All fields are required.</p>

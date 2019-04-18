@@ -17,7 +17,7 @@ export default new Vuex.Store({
     setPhotos(state, photos) {
       state.photos = photos;
     },
-    setPhoto(state, user) {
+    setPhoto(state, photo) {
       state.photo = photo;
     }
   },
@@ -66,7 +66,7 @@ export default new Vuex.Store({
         return error.response.data.message;
       }
     },
-    async getMyPhotos(context) {
+    async getAllPhotos(context) {
      try {
        let response = await axios.get("/api/photos");
        context.commit('setPhotos', response.data);
@@ -75,9 +75,9 @@ export default new Vuex.Store({
        return "";
      }
    },
-   async getMyPhoto(context) {
+   async getMyPhoto(context, id) {
     try {
-      let response = await axios.get("/api/photos");
+      let response = await axios.get("/api/photos/" + id);
       context.commit('setPhoto', response.data);
       return "";
     } catch (error) {

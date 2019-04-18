@@ -17,7 +17,7 @@
       <image-gallery :photos="photos" />
     </div>
     <div v-else>
-      <p>If you would like to upload photos, please register for an account or login.</p>
+      <p>Register for an account or login and begin sharing what makes your computer feel like home!</p>
       <router-link to="/register" class="pure-button">Register</router-link> or
       <router-link to="/login" class="pure-button">Login</router-link>
     </div>
